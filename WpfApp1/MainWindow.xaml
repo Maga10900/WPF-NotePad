@@ -1,0 +1,94 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Background="Transparent" Height="650" Width="950" WindowStyle="None"
+        AllowsTransparency="True" 
+        Icon="/Photos/note.png"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border CornerRadius="20" Background="LightSkyBlue"/>
+
+        <Button Grid.Row="0" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Background="Transparent" BorderThickness="0" Click="Button_Click" Cursor="Hand">
+            <Image Source="/Photos/close.png"/>
+        </Button>
+        <Label Content="NotePad" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Panel.ZIndex="0"/>
+        <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Margin="0 50 0 0" Height="2"/>
+
+        <Button Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15 60" Content="B" FontSize="25" Background="Transparent" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+
+        <Button Width="35" Height="35" Content="I" FontStyle="Italic" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60 60" Background="Transparent" BorderThickness="0" FontWeight="Bold"/>
+
+        <Button Width="35" Height="35" FontSize="25" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110 60" BorderThickness="0">
+            <Button.Content>
+                <TextBlock Text="U" TextDecorations="Underline" FontWeight="Bold"/>
+            </Button.Content>
+        </Button>
+
+        <Button Width="35" Height="35" FontSize="25" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Margin="160 60">
+            <Button.Content>
+                <TextBlock Text="S" TextDecorations="Strikethrough"/>
+            </Button.Content>
+        </Button>
+
+        <ComboBox Width="150" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="210 63" FontSize="20" >
+            <ComboBoxItem Content="Segoe UI" IsSelected="True"/>
+            
+        </ComboBox>
+
+        <ComboBox Width="80" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="380 63" FontSize="20">
+            <ComboBoxItem Content="11" IsSelected="True"/>
+        </ComboBox>
+
+        <ComboBox Width="70" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="480 63 0 0" >
+            <ComboBoxItem IsSelected="True">
+                <ComboBoxItem.Content >
+                    <TextBlock Text="A" TextDecorations="Underline" FontSize="20" FontWeight="Bold"/>
+                </ComboBoxItem.Content>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Width="70" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="570 63 0 0">
+            <ComboBoxItem IsSelected="True">
+                <ComboBoxItem.Content>
+                    <Image Source="/Photos/bucket.png" Width="23" Margin="0,2,0,0"/>
+                </ComboBoxItem.Content>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <Label Height="60" Content="|" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 44 288 0" FontSize="40" />
+
+        <ComboBox Width="85" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 63 200 0">
+            <ComboBoxItem IsSelected="True">
+                <ComboBoxItem.Content>
+                    <TextBlock Text="Para" FontSize="20" FontWeight="Bold" Margin="0,0,0,0"/>
+                </ComboBoxItem.Content>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox Width="65" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 63 120 0">
+            <ComboBoxItem IsSelected="True">
+                <ComboBoxItem.Content>
+                    <Image Source="/Photos/align-left.png" Width="24" Margin="0 3 0 0"/>
+                </ComboBoxItem.Content>
+            </ComboBoxItem>
+        </ComboBox>
+
+
+        <Button Width="35" Height="35" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 62 70 0" BorderThickness="0">
+            <Image Source="/Photos/list-symbol-of-three-items-with-dots.png" Width="31"/>
+        </Button>
+
+        <Button Width="35" Height="35" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 62 15 0" BorderThickness="0">
+            <Image Source="/Photos/list-with-numbers-interface-option.png" Width="31"/>
+        </Button>
+
+        <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Margin="0 180 0 0" Height="2"/>
+
+        <RichTextBox Height="468" VerticalAlignment="Bottom" BorderBrush="Black"/>
+        
+    </Grid>
+</Window>
