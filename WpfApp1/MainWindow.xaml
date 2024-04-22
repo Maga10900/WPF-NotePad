@@ -39,8 +39,8 @@
             
         </ComboBox>
 
-        <ComboBox Width="80" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="380 63" FontSize="20">
-            <ComboBoxItem Content="11" IsSelected="True"/>
+        <ComboBox Name="CMb" Width="80" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="380 63" FontSize="20" SelectionChanged="ComboBox_SelectionChanged">
+            
         </ComboBox>
 
         <ComboBox Width="70" Height="35" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="480 63 0 0" >
@@ -88,7 +88,26 @@
 
         <Border BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Margin="0 180 0 0" Height="2"/>
 
-        <RichTextBox Height="468" VerticalAlignment="Bottom" BorderBrush="Black"/>
-        
+        <RichTextBox Name="RichTextBox" Margin="0 183 0 10"  BorderBrush="Black" TextChanged="RichTextBox_TextChanged"/>
+
+        <StackPanel Height="60" VerticalAlignment="Top" Margin="0 110 0 0 " Orientation="Horizontal">
+            <TextBox Name="txtBox" Width="200" Height="35" Margin="10 0 0 0" Background="LightCyan" BorderThickness="0" FontSize="22"/>
+            <Button Width="35" Height="35" Background="Transparent" BorderThickness="0" Content="🔼" FontSize="27" Padding="0 0 0 0" Margin="0 0 0 3" Click="Button_Click_1"/>
+
+            <Button x:Name="Save_Button" Height="35" Width="100" Margin="20 0 0 0" Content="Save" Click="Save_Button_Click" Background="Transparent" BorderThickness="0" FontSize="22" FontWeight="Bold"/>
+
+            <CheckBox Name ="CH_Box" Background="Transparent" BorderThickness="1" Margin="20 7 0 0">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3"/>
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <Button Width="70" Height="35" Background="Transparent" Content="Copy" FontSize="22" FontWeight="Bold" Margin="20 0 0 0" Click="Button_Click_5" BorderThickness="0"/>
+
+            <Button Width="75" Height="35" Margin="20 0 0 0" Background="Transparent" Content="Cut" FontSize="22" FontWeight="Bold" Click="Button_Click_4" BorderThickness="0"/>
+            <Button Width="100" Height="35" Margin="20 0 0 0" Background="Transparent" Content="Paste" FontSize="22" FontWeight="Bold" Click="Button_Click_3" BorderThickness="0"/>
+
+            <Button Width="200" Height="35" Margin="20 0 0 0" Content="Select All" FontSize="22" FontWeight="Bold" Background="Transparent" BorderThickness="0" Click="Button_Click_6"/>
+        </StackPanel>
+
     </Grid>
 </Window>
